@@ -1,0 +1,25 @@
+{
+  "name": "dictionary-cli-tool",
+  "version": "1.0.0",
+  "description": "dictionary-cli tool for assignment",
+  "main": "index.js",
+  "bin": {
+    "dict": "bin/dict"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vijaydaswani/dictionary-cli-tool.git"
+  },
+  "author": "Vijay Daswani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vijaydaswani/dictionary-cli-tool/issues"
+  },
+  "homepage": "https://github.com/Vijaydaswani/dictionary-cli-tool#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
