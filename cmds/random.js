@@ -8,8 +8,8 @@ module.exports = async (args) => {
   try {
     const word = args._[0] || args.w
     const wordNumber = args.n;
-    console.log("Full Word Dictionary:")
-    const random = await getRandom();
+
+    const random = await getRandom(args);
 
 
     setTimeout(function () {
@@ -19,8 +19,6 @@ module.exports = async (args) => {
 
 
 
-
-    //  console.log(`\t${weather.condition.temp}° ${weather.condition.text}`)
   } catch (err) {
     spinner.stop()
 
@@ -29,7 +27,3 @@ module.exports = async (args) => {
 }
 
 
-
-/*
-/word/{word}/relatedWords?api_key={api_key}
-*/

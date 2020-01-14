@@ -1,5 +1,8 @@
 const menus = {
+  logo: ` `,
   main: `
+    Dictionary cli tool : Assignment By Vijay Daswani
+    ________________________________________________________
     dict [command] <word>
 
     defn .............. Display definitions of a given word
@@ -9,13 +12,29 @@ const menus = {
     play ............ Play a word game.
     version ............ Display tool version
     help ............... Display help menu for a command
-    
+    __________________________________________________________
+
+    dict [command] <options>
+
+    -n ..... Number of results
     ` ,
 
-  word: `
-    dict word <options>
+  defn: `
+    dict defn <word> <options> <number>
 
-    --ex, -e ..... for the examples`,
+    -n ..... Number of results`,
+  ant: `
+    dict ant <word> <options> <number>
+
+    -n ..... Number of results`,
+  syn: `
+    dict syn <word> <options> <number>
+
+    -n ..... Number of results`,
+  ex: `
+    dict ex <word> <options> <number>
+
+    -n ..... Number of results`,
 }
 
 module.exports = (args) => {
