@@ -6,8 +6,6 @@ module.exports = async (word, n) => {
 
   const url = `https://${config.API_HOST}/word/${word}/definitions?api_key=${config.API_KEY}`;
 
-
-
   request.get(url, (error, response, body) => {
     let json = JSON.parse(body);
     //  console.log(json);
@@ -18,16 +16,18 @@ module.exports = async (word, n) => {
       if (!n) {
         n = json.length
       }
-
+      console.log(`Definitions of ${word}:`)
       json.forEach(element => {
         if (i <= n) {
-          console.log(i + ". " + element.text)
+          wordDefinations = i + ". " + element.text;
+
+          console.log(wordDefinations)
           i++;
         }
       });
     }
     else {
-      return json.error
+      console.log(json.error)
     }
     //} catch (e) {
     // console.log(json.error || e)

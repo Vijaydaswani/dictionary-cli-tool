@@ -2,7 +2,7 @@ const minimist = require('minimist')
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2))
-  console.log(args)
+
   let cmd = args._[0] || 'help'
 
   if (args.version || args.v) {
@@ -34,10 +34,15 @@ module.exports = () => {
       require('./cmds/synonym')(args)
       break
 
+    case 'ex':
+      require('./cmds/example')(args)
+      break
+
 
 
     default:
-      console.error(`"${cmd}" is not a valid command!`)
+      require('./cmds/dictionary')(args)
+      // console.error(`"${cmd}" is not a valid command!`)
       break
   }
 }
