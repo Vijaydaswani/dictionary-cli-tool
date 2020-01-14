@@ -12,6 +12,9 @@ module.exports = () => {
   if (args.help || args.h) {
     cmd = 'help'
   }
+  if (args.word || args.w) {
+    cmd = 'help'
+  }
 
   switch (cmd) {
     case 'defn':
@@ -38,6 +41,9 @@ module.exports = () => {
       require('./cmds/example')(args)
       break
 
+    case 'word':
+      require('./cmds/random')(args)
+      break
 
 
     default:

@@ -1,5 +1,5 @@
 const ora = require('ora')
-const getSynonym = require('../utils/getExamples')
+const getExamples = require('../utils/getExamples')
 
 module.exports = async (args) => {
   const spinner = ora().start()
@@ -8,7 +8,7 @@ module.exports = async (args) => {
     const word = args._[1] || args.w
     const exampleNumber = args.n;
 
-    const example = await getSynonym(word, exampleNumber)
+    const example = await getExamples(word, exampleNumber)
 
     setTimeout(function () {
       spinner.stop()

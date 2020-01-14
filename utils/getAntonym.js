@@ -12,26 +12,31 @@ module.exports = async (word, n) => {
 
       let antonym;
       json.forEach(rt => {
-        if (rt.relationshipType == 'antonym') {
 
+        if (rt.relationshipType == 'antonym') {
           antonym = rt.words;
+        }
+        if (!n && antonym) {
+          n = antonym.length
         }
 
       })
+
+
+
       let i = 1;
-      if (!n) {
-        n = antonym.length
+      if (antonym) {
+        console.log(`Antonyms of ${word}:`)
+        antonym.forEach(element => {
+          if (i <= n) {
+            wordAntonyms = i + ". " + element;
+
+            console.log(wordAntonyms)
+            i++;
+          }
+        });
+
       }
-      console.log(`Antonyms of ${word}:`)
-      antonym.forEach(element => {
-        if (i <= n) {
-          wordAntonyms = i + ". " + element;
-
-          console.log(wordAntonyms)
-          i++;
-        }
-      });
-
     }
     else {
       console.log(json.error)

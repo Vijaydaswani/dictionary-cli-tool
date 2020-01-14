@@ -10,7 +10,7 @@ module.exports = async (word, n) => {
     let json = JSON.parse(body);
     if (!json.error) {
       let synonyms;
-      console.log(json)
+
       json.forEach(rt => {
         if (rt.relationshipType == 'synonym') {
 
@@ -18,10 +18,7 @@ module.exports = async (word, n) => {
         }
       })
 
-
-
       let i = 1;
-
 
       if (!n) {
         n = synonyms.length
