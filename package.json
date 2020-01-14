@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Vijaydaswani/dictionary-cli-tool#readme",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "ora": "^4.0.3",
+    "request": "^2.88.0"
   }
 }
