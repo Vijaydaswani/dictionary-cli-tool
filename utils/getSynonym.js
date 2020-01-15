@@ -25,8 +25,8 @@ module.exports = async (word, game_flag, n) => {
         `)
 
         console.log("Below two lines are removed from the actual code.")
-        console.log(`Actual word: ${word}`)
-        console.log(`Synonyms of the words : ${synonyms}`);
+        //   console.log(`Actual word: ${word}`)
+        // console.log(`Synonyms of the words : ${synonyms}`);
         var synonym = synonyms[Math.floor(Math.random() * synonyms.length)];
         var questions = [{
           type: 'input',
