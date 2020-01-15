@@ -49,7 +49,9 @@ module.exports = () => {
     case 'word':
       require('./cmds/random')(args)
       break
-
+    case 'play':
+      require('./cmds/play')(args)
+      break
 
     default:
       require('./cmds/dictionary')(args)
