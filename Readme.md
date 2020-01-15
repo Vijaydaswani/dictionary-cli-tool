@@ -1,6 +1,7 @@
 # Dictionary cli tool
 
 Based on the assignment in the below link,
+[Assignment](https://paper.dropbox.com/published/Command-Line-Dictionary-Tool-5c8L4xJ7M5IfPSeuGMXYLKJ)
 Completed the assignment.
 
 Created a cli - dict 
